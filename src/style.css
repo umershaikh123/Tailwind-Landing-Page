@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* npx tailwindcss -i ./src/style.css -o ./public/style.css --watch */
+
+
+body {
+
+    background-image: url('img/bg-tablet-pattern.svg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: 90%-25%;
+  
+  }
+
+.open-menu-icon {
+   display: block;
+}
+
+.close-menu-icon{
+    display: none;
+}
+
+#Menu {
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity .25s ease-in;
+}
+
+#Menu.activated{  
+    opacity: 1;
+    transform: scale(1);
+}
+
+.menu-toggle-icon.activated .open-menu-icon {
+    display: none;
+}
+
+.menu-toggle-icon.activated .close-menu-icon {
+    display: block;
+}
+
+
+  /* Custom Css for js */
+@media (max-width : 768px) {
+ 
+    body {
+      background-position: 50px -50px;
+      background-size: 500px ;
+    
+    
+    }
+    
+    #cta {
+    background-image: url('img/bg-simplify-section-mobile.svg');
+    background-repeat: no-repeat;
+
+    }
+}
+    
